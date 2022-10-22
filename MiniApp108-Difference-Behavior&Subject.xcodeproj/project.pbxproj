@@ -16,6 +16,10 @@
 		8768ABFD29037D6B0098195B /* MiniApp108_Difference_Behavior_SubjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8768ABFC29037D6B0098195B /* MiniApp108_Difference_Behavior_SubjectTests.swift */; };
 		8768AC0729037D6B0098195B /* MiniApp108_Difference_Behavior_SubjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8768AC0629037D6B0098195B /* MiniApp108_Difference_Behavior_SubjectUITests.swift */; };
 		8768AC0929037D6B0098195B /* MiniApp108_Difference_Behavior_SubjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8768AC0829037D6B0098195B /* MiniApp108_Difference_Behavior_SubjectUITestsLaunchTests.swift */; };
+		8768AC1729037DA30098195B /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8768AC1629037DA30098195B /* RxCocoa */; };
+		8768AC1929037DA30098195B /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 8768AC1829037DA30098195B /* RxRelay */; };
+		8768AC1B29037DA30098195B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8768AC1A29037DA30098195B /* RxSwift */; };
+		8768AC1D290380D10098195B /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8768AC1C290380D10098195B /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,7 @@
 		8768AC0229037D6B0098195B /* MiniApp108-Difference-Behavior&SubjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MiniApp108-Difference-Behavior&SubjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8768AC0629037D6B0098195B /* MiniApp108_Difference_Behavior_SubjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniApp108_Difference_Behavior_SubjectUITests.swift; sourceTree = "<group>"; };
 		8768AC0829037D6B0098195B /* MiniApp108_Difference_Behavior_SubjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniApp108_Difference_Behavior_SubjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8768AC1C290380D10098195B /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8768AC1B29037DA30098195B /* RxSwift in Frameworks */,
+				8768AC1929037DA30098195B /* RxRelay in Frameworks */,
+				8768AC1729037DA30098195B /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +114,7 @@
 				8768ABEE29037D6B0098195B /* Assets.xcassets */,
 				8768ABF029037D6B0098195B /* LaunchScreen.storyboard */,
 				8768ABF329037D6B0098195B /* Info.plist */,
+				8768AC1C290380D10098195B /* MainViewModel.swift */,
 			);
 			path = "MiniApp108-Difference-Behavior&Subject";
 			sourceTree = "<group>";
@@ -143,6 +152,11 @@
 			dependencies = (
 			);
 			name = "MiniApp108-Difference-Behavior&Subject";
+			packageProductDependencies = (
+				8768AC1629037DA30098195B /* RxCocoa */,
+				8768AC1829037DA30098195B /* RxRelay */,
+				8768AC1A29037DA30098195B /* RxSwift */,
+			);
 			productName = "MiniApp108-Difference-Behavior&Subject";
 			productReference = 8768ABE229037D6A0098195B /* MiniApp108-Difference-Behavior&Subject.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +229,9 @@
 				Base,
 			);
 			mainGroup = 8768ABD929037D6A0098195B;
+			packageReferences = (
+				8768AC1529037DA30098195B /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 8768ABE329037D6A0098195B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,6 +278,7 @@
 				8768ABEA29037D6A0098195B /* ViewController.swift in Sources */,
 				8768ABE629037D6A0098195B /* AppDelegate.swift in Sources */,
 				8768ABE829037D6A0098195B /* SceneDelegate.swift in Sources */,
+				8768AC1D290380D10098195B /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +620,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8768AC1529037DA30098195B /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8768AC1629037DA30098195B /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8768AC1529037DA30098195B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		8768AC1829037DA30098195B /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8768AC1529037DA30098195B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		8768AC1A29037DA30098195B /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8768AC1529037DA30098195B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8768ABDA29037D6A0098195B /* Project object */;
 }
